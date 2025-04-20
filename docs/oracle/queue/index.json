@@ -1,1 +1,13 @@
-
+{
+  "queue": [
+    {
+      "card_id": "TD_SCOTUS_001",
+      "title": "The Judicial Circus",
+      "status": "Broadcasted",
+      "timestamp": "2025-04-20T06:33:00Z",
+      "jurisdiction": "Snapback Supreme Tribunal",
+      "mirror_mode": true,
+      "oracle_link": "/oracle/queue/index.json"
+    }
+  ]
+}
