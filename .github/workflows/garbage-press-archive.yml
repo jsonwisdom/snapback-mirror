@@ -11,6 +11,9 @@ on:
     paths:
       - "garbage-press/**"
 
+permissions:
+  contents: write
+
 jobs:
   archive:
     runs-on: ubuntu-latest
