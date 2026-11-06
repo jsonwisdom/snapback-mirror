@@ -1,0 +1,35 @@
+{
+  "schema": "computerwisdom.garbagepress.review.v1",
+  "release_id": "JASONS-CARDS-STUFF-2026-11-06",
+  "status": "DRAFT_NOT_PUBLISHED",
+  "created_utc_date": "2026-11-06",
+  "brand": "Jason's Cards & Stuff",
+  "cover": {
+    "file": "JASONS_CARDS_STUFF_FACEBOOK_COVER_2026-11-06.png",
+    "width_px": 1640,
+    "height_px": 624,
+    "size_bytes": 101946,
+    "sha256": "34592609cf53b83c7d089865b5c1233bace36372415e1624f534fe191ec09c54",
+    "file_in_repository": false,
+    "facebook_published": false
+  },
+  "review": {
+    "topps_ip_clearance": "UNKNOWN",
+    "stripe_checkout": "NOT_ESTABLISHED",
+    "stripe_payment_links_observed": 0,
+    "cloudflare_deployment_changed": false,
+    "github_main_changed": false,
+    "wallet_signing_authority": "NOT_ESTABLISHED"
+  },
+  "observed_workers": [
+    "jasons-art-gallery",
+    "political-triggerdeck-2026",
+    "wisdom-catalog-curator"
+  ],
+  "guardrails": [
+    "No third-party Topps/GPK logos in replacement commercial art",
+    "No payment processing or payout changes without verification",
+    "No automatic public posting or main-branch merge",
+    "Art SHA-256 demonstrates byte identity only, not rights or provenance"
+  ]
+}
