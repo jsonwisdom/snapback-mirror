@@ -1,0 +1,36 @@
+name: Garbage Press Archive
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_path:
+        description: "Relative path to production package directory"
+        required: true
+        type: string
+  push:
+    paths:
+      - "garbage-press/**"
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run packager
+        run: |
+          python scripts/package_archive.py "${{ github.event.inputs.package_path || 'garbage-press/latest' }}"
+
+      - name: Commit manifest (if changed)
+        run: |
+          git config user.name "garbage-press-archive"
+          git config user.email "archive@jsonwisdom.local"
+          git add -A
+          git diff --staged --quiet || git commit -m "Archive: update manifest [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
+          git push
+        continue-on-error: true
